@@ -79,7 +79,6 @@ console.log(values);
 
 // Advanced Level
 
-
 // Exercise 1: Create an array called names with five names. Write a function that takes an array as a parameter and returns the length of the longest name in the array.
 
 const fiveNames = ['Pragyan', 'Abhigyan', 'Christopher', 'Yukti', 'Kabir'];
@@ -111,8 +110,70 @@ console.log(smallestNumber());
 
 // Exercise 3: Create an array called words with five different words. Write a function that takes an array as a parameter and returns a new array with the lengths of each word.
 
-
+const words = ['Bank', 'Hotel', 'Manager', 'Employee', 'Dustbin'];
+function returnLengths(words) {
+    let outputString = '';
+    for(let i = 0; i < words.length; i++) {
+        outputString += `${words[i]} (Length) : ${words[i].split('').length}\n`;
+    }
+    return outputString;
+}
+console.log(returnLengths(words));
 
 // Exercise 4: Given an array numbers with random integers, write a function that checks if all the numbers in the array are positive.
 
+const numbersArray = [10, 4, 9, 7, -12];
+function checkNegative(arr) {
+    let check = false;
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] < 0) {
+            check = true;
+            return check;
+        }
+    }
+    return check;
+}
+console.log(checkNegative(numbersArray));
+
 // Exercise 5: Create a function called reverseArray that takes an array as a parameter and returns a new array with the elements in reverse order.
+
+function reverseArray(arr) {
+    return arr.reverse();
+}
+console.log(reverseArray([1, 2, 3, 4, 5]));
+
+
+// Expert Level
+
+// Exercise 1: Create a function called uniqueValues that takes an array as a parameter and returns a new array with only the unique values from the original array.
+
+function uniqueValues(arr) {
+
+}
+console.log(uniqueValues(1, 2, 2, 3, 5, 10, 20, 5, 4, 10));
+
+// Exercise 2: Given two arrays arr1 and arr2, write a function that combines the elements from both arrays and returns a new array.
+
+function combineArrays(arr1, arr2) {
+    return arr1.concat(arr2);
+}
+console.log(combineArrays([1, 4, 8], [2, 7, 4]));
+
+// Exercise 3: Create a function called capitalizeNames that takes an array of names as a parameter and returns a new array with the names capitalized.
+
+function capitalizeNames(arr) {
+    return arr;
+}
+console.log(capitalizeNames(['neerav', 'vijay', 'abhijeet', 'mrigmala']));
+
+// Exercise 4: Given an array numbers with random integers, write a function that sorts the array in ascending order.
+
+function sortAscending(arr) {
+    return arr.sort((a,b) => a-b);
+}
+console.log(sortAscending([10, 15, 24, 60, 2, 8, 17, 31, 72, 45]));
+
+// Exercise 5: Create a function called matrixMultiplication that takes two 2D arrays as parameters and returns the result of matrix multiplication.
+
+function matrixMultiplication(arr1, arr2) {}
+console.log(matrixMultiplication());
