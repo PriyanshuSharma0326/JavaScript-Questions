@@ -147,8 +147,17 @@ console.log(reverseArray([1, 2, 3, 4, 5]));
 
 // Exercise 1: Create a function called uniqueValues that takes an array as a parameter and returns a new array with only the unique values from the original array.
 
-function uniqueValues(arr) {}
-console.log(uniqueValues(1, 2, 2, 3, 5, 10, 20, 5, 4, 10));
+function uniqueValues(arr) {
+    let newArr = [];
+    for(let i = 0; i < arr.length; i++) {
+        if(!newArr.includes(arr[i])) {
+            newArr.push(arr[i]);
+        }
+    }
+    return newArr;
+}
+console.log('Here');
+console.log(uniqueValues([1, 2, 2, 3, 5, 10, 20, 5, 4, 10]));
 
 // Exercise 2: Given two arrays arr1 and arr2, write a function that combines the elements from both arrays and returns a new array.
 
@@ -159,9 +168,7 @@ console.log(combineArrays([1, 4, 8], [2, 7, 4]));
 
 // Exercise 3: Create a function called capitalizeNames that takes an array of names as a parameter and returns a new array with the names capitalized.
 
-function capitalizeNames(arr) {
-    return arr;
-}
+function capitalizeNames(arr) {}
 console.log(capitalizeNames(['neerav', 'vijay', 'abhijeet', 'mrigmala']));
 
 // Exercise 4: Given an array numbers with random integers, write a function that sorts the array in ascending order.
@@ -173,5 +180,31 @@ console.log(sortAscending([10, 15, 24, 60, 2, 8, 17, 31, 72, 45]));
 
 // Exercise 5: Create a function called matrixMultiplication that takes two 2D arrays as parameters and returns the result of matrix multiplication.
 
-function matrixMultiplication(arr1, arr2) {}
-console.log(matrixMultiplication());
+function matrixMultiplication(matrix1, matrix2) {
+    if(matrix1[0].length !== matrix2.length) {
+        console.log('Can\'t multiply matrices.');
+    }
+    let resultantMatrix = new Array(matrix1.length);
+    for (let i = 0; i < resultantMatrix.length; i++) {
+        resultantMatrix[i] = new Array(matrix2[0].length).fill(0);
+    }
+    for(let i = 0; i < matrix1.length; i++) {
+        for(let j = 0; j < matrix2[0].length; j++) {
+            for(let k = 0; k < matrix2.length; k++) {
+                resultantMatrix[i][j] += matrix1[i][k]*matrix2[k][j];
+            }
+        }
+    }
+    return resultantMatrix;
+}
+console.log(matrixMultiplication(
+    [
+        [1, 2, 3],
+        [4, 5, 6]
+    ],
+    [
+        [10, 11],
+        [20, 21],
+        [30, 31]
+    ]
+));
