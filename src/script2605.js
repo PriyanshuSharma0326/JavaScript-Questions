@@ -147,9 +147,7 @@ console.log(reverseArray([1, 2, 3, 4, 5]));
 
 // Exercise 1: Create a function called uniqueValues that takes an array as a parameter and returns a new array with only the unique values from the original array.
 
-function uniqueValues(arr) {
-
-}
+function uniqueValues(arr) {}
 console.log(uniqueValues(1, 2, 2, 3, 5, 10, 20, 5, 4, 10));
 
 // Exercise 2: Given two arrays arr1 and arr2, write a function that combines the elements from both arrays and returns a new array.
